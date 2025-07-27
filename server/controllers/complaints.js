@@ -129,7 +129,7 @@ const createComplaint = async (req, res) => {
   console.log("Officers found:", officers);
 console.log("Selected officer:", selectedOfficer);
   await complaint.assignEmail(user.email);
-  await complaint.addFeedback(
+  await complaint.addFeedback(  
     selectedOfficer.name,
     selectedOfficer.level,
     "Complaint received"
@@ -258,14 +258,14 @@ const sendEmail = async (to, subject, body, head) => {
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
-      auth: {
+      auth: { // the account u control and authenrticate with
         user: 'grievanceportaliiita4@gmail.com',
         pass: 'bryoccqsbhkhnhah',
       },
     });
 
     let info = await transporter.sendMail({
-      from: ' "Grievance Portal" <grievanceportal25@gmail.com>',
+      from: ' "Grievance Portal" <grievanceportal25@gmail.com>', // the accpunt whivh will e visible to the receiver , we can set it to anything.
       to: to,
       subject: head,
       text: `Message from grievance portal: ${body}`,
