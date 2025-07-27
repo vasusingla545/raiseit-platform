@@ -10,9 +10,6 @@ const Officer = require("../models/Officer");
 var nodemailer = require('nodemailer');
 const { config } = require("dotenv");
 // const { findById } = require("../models/User");
-// const accountSid = 'AC4109f98ba850a5476ba4581780d566ab';
-// const authToken = process.env.TWILIO_AUTH;
-// const client = require('twilio')(accountSid, authToken);
 require('dotenv').config();
 
 const getAllTasks = async (req, res) => {
@@ -150,7 +147,7 @@ const updateTask = async (req, res) => {
     await complaint.updateStatus(req.body.status);
 
   }
-
+ 
   if (req.body.feedback) {
     await complaint.addFeedback(officer.name, officer.level, req.body.feedback);
 
@@ -158,7 +155,7 @@ const updateTask = async (req, res) => {
     await complaint.addFeedback(officer.name, officer.level, `Status updated.`);
 
   }
-
+x
   const bod = `Status updated about your grievance "${complaint.subject}"`
   const user = await User.findOne({ _id: complaint.createdBy })
   await sendEmail(user.email, complaint.subject, bod)
