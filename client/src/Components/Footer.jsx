@@ -10,7 +10,7 @@ export default function footer(props) {
               <a href="" className="flex items-center">
                 <img src={NAVLOGO} className="h-8 mr-3" alt="FlowBite Logo" />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  आवाज़
+                  Raise-It
                 </span>
               </a>
             </div>
@@ -73,7 +73,7 @@ export default function footer(props) {
             <span className="text-sm text-white sm:text-center dark:text-gray-400">
               © 2023{" "}
               <a href="" className="hover:underline">
-                आवाज़™
+                Raise-It™
               </a>
               . All Rights Reserved.
             </span>

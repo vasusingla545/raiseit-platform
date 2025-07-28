@@ -9,7 +9,7 @@ export default function UserNavbar(props){
           <div className="w-70 md:w-48 md:nav-left flex items-center justify-between  ml-4 md:m-0 md:ml-10 pt-4 md:pt-0 ">
             <div className="flex justify-center ml-4 items-center">
               <img src={NAVLOGO} alt="" className="h-14" />
-              <h1 className="text-3xl mb-1">आवाज़</h1>
+              <h1 className="text-3xl mb-1">Raise-It</h1>
             </div>
             <Link
               to="/userlogin"
