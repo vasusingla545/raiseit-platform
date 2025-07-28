@@ -12,6 +12,7 @@ function roleAuthenticationMiddleware (role){
         const payload = jwt.verify(token, process.env.JWT_SECRET)
         const userId = payload.userId
         // console.log(userId)
+        
 
         if (role == 'admin'){
             const user = await Admin.findById(userId)
