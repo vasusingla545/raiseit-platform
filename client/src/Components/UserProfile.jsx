@@ -8,7 +8,7 @@ export default function UserProfile(props){
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: "http://localhost:3000/api/v1/user",
+    url: `${import.meta.env.VITE_API_URL}/api/v1/user`,
     headers: {
       Authorization:
         `Bearer ${token}`,

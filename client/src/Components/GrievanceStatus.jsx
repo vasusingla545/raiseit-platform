@@ -4,10 +4,11 @@ import Modal from "./Modal";
 import Loading from "./Loading";
 export default function GrievanceStatus(props) {
   const token = localStorage.getItem("token");
+  const apiUrl = import.meta.env.VITE_API_URL;
   let config = {
     method: "get",
     maxBodyLength: Infinity,
-    url: "http://localhost:3000/api/v1/tasks",
+    url: `${apiUrl}/api/v1/tasks`,
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -42,7 +43,7 @@ export default function GrievanceStatus(props) {
     let config2 = {
       method: "patch",
       maxBodyLength: Infinity,
-      url: `http://localhost:3000/api/v1/tasks/pass/${id}`,
+      url: `${apiUrl}/api/v1/tasks/pass/${id}`,
       headers: {
         Authorization: `Bearer ${token}`,
       },

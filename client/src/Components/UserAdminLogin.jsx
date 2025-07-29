@@ -17,7 +17,7 @@ function Login(props){
  let config = {
    method: "post",
    maxBodyLength: Infinity,
-   url: (user=="Citizen"?("http://localhost:3000/api/v1/auth/login"):(user=="Officer"?("http://localhost:3000/api/v1/auth/officer/login"):("http://localhost:3000/api/v1/auth/admin/login"))) ,
+   url: (user=="Citizen"?(`${import.meta.env.VITE_API_URL}/api/v1/auth/login`):(user=="Officer"?(`${import.meta.env.VITE_API_URL}/api/v1/auth/officer/login`):(`${import.meta.env.VITE_API_URL}/api/v1/auth/admin/login`))) ,
    headers: {
      Authorization: "Bearer ",
      "Content-Type": "application/json",

@@ -10,7 +10,7 @@ export default function MyGrievance(props) {
      let config = {
        method: "get",
        maxBodyLength: Infinity,
-       url: "http://localhost:3000/api/v1/manage/getOfficerData",
+       url: `${import.meta.env.VITE_API_URL}/api/v1/manage/getOfficerData`,
        headers: {
          Authorization: `Bearer ${token}`,
        },

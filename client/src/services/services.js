@@ -22,10 +22,11 @@ let data = JSON.stringify({
   district: "delhi",
 });
 
+const apiUrl = import.meta.env.VITE_API_URL;
 let config = {
   method: "post",
   maxBodyLength: Infinity,
-  url: "http://localhost:3000/api/v1/auth/register",
+  url: `${apiUrl}/api/v1/auth/register`,
   headers: {
     "Content-Type": "application/json",
   },

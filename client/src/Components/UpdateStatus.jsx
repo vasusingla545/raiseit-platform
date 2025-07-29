@@ -17,7 +17,7 @@ export default function UpdateStatus(props) {
  let config = {
    method: "get",
    maxBodyLength: Infinity,
-   url: `http://localhost:3000/api/v1/tasks/${id}`,
+   url: `${import.meta.env.VITE_API_URL}/api/v1/tasks/${id}`,
    headers: {
      Authorization:
        `Bearer ${token}`,
@@ -26,7 +26,7 @@ export default function UpdateStatus(props) {
  let config2 = {
    method: "patch",
    maxBodyLength: Infinity,
-   url: `http://localhost:3000/api/v1/tasks/feedback/${id}`,
+   url: `${import.meta.env.VITE_API_URL}/api/v1/tasks/feedback/${id}`,
    headers: {
      Authorization:
        `Bearer ${token}`,

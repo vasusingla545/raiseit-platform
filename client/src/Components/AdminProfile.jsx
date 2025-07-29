@@ -8,7 +8,7 @@ export default function AdminProfile(props){
  let config = {
    method: "get",
    maxBodyLength: Infinity,
-   url: "http://localhost:3000/api/v1/officer",
+   url: `${import.meta.env.VITE_API_URL}/api/v1/officer`,
    headers: {
      Authorization: `Bearer ${token}`,
    },

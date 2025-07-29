@@ -16,7 +16,7 @@ const token = localStorage.getItem("token");
 let config = {
   method: "patch",
   maxBodyLength: Infinity,
-  url: "http://localhost:3000/api/v1/user",
+  url: `${import.meta.env.VITE_API_URL}/api/v1/user`,
   headers: {
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",

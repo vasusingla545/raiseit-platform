@@ -9,13 +9,13 @@ function FileNewGrievance(props) {
     setData({...data, [e.target.name]: e.target.value});
   }
   const token = localStorage.getItem("token");
+ const apiUrl = import.meta.env.VITE_API_URL;
  let config = {
    method: "post",
    maxBodyLength: Infinity,
-   url: "http://localhost:3000/api/v1/complaints/",
+   url: `${apiUrl}/api/v1/complaints/`,
    headers: {
-     Authorization:
-       `Bearer ${token}`,
+     Authorization: `Bearer ${token}`,
      "Content-Type": "application/json",
    },
    data: data,

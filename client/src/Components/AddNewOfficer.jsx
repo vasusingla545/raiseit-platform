@@ -41,7 +41,7 @@ export default function AddNewOfficer(props) {
           let config = {
             method: "post",
             maxBodyLength: Infinity,
-            url: "http://localhost:3000/api/v1/manage/registerOfficer",
+            url: `${import.meta.env.VITE_API_URL}/api/v1/manage/registerOfficer`,
             headers: {
               "Content-Type": "application/json",
               Authorization:
